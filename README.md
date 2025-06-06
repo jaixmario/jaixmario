@@ -72,9 +72,7 @@
 ### 🌐 Let's Connect
 
 <p align="center">
-  <a href="https://t.me/jaixmario"><img src="https://img.shields.io/badge/-@jaixmario-2CA5E0?style=flat&logo=telegram&logoColor=white" /></a>
-  <a href="https://twitter.com/jaixmario"><img src="https://img.shields.io/badge/-@jaixmario-1DA1F2?style=flat&logo=twitter&logoColor=white" /></a>
-  <a href="https://linkedin.com/in/jaixmario"><img src="https://img.shields.io/badge/-Mario-0077B5?style=flat&logo=linkedin&logoColor=white" /></a>
+  <a href="https://t.me/rcmario"><img src="https://img.shields.io/badge/-@jaixmario-2CA5E0?style=flat&logo=telegram&logoColor=white" /></a>
   <a href="https://jaiiiiiiiportfolio.vercel.app/"><img src="https://img.shields.io/badge/-Portfolio-000?style=flat&logo=github&logoColor=white" /></a>
 </p>
 
