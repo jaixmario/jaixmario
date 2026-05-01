@@ -8,7 +8,7 @@
 
 ---
 <p align="left">
-  <img src="https://komarev.com/ghpvc/?username=jaixmario&label=Profile%20views&color=0e75b6&style=flat" alt="jaixmario" />
+  <img src="https://komarev.com/ghpvc/?username=jaixmario0&label=Profile%20views&color=0e75b6&style=flat" alt="jaixmario" />
 </p>
 ### 💫 About Me
 
