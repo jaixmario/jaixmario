@@ -7,9 +7,7 @@
 </p>
 
 ---
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=jaixmario0&label=Profile%20views&color=0e75b6&style=flat" alt="jaixmario" />
-</p>
+![Profile Views](https://githubbadge.mario22623.workers.dev/jaixmario?label=repo%20views&color=%23c70000&labelColor=%23000000&textColor=%23ffffff&countColor=%23ffffff&fontSize=11&format=sh
 ### 💫 About Me
 
 - 👨‍💻 Developer based in Delhi, India. 
