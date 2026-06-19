@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jaixmario | Official Personal Portfolio Site</title>
+  <meta name="description" content="Official site of jaixmario. Find the latest projects, GitHub profile, and professional information for the web developer jaixmario.">
+  <meta name="keywords" content="jaixmario, jaixmario GitHub, jaixmario portfolio, jaixmario developer, Jaideep, Jaideep developer, Jaideep Delhi, Jaideep portfolio, Jaideep jaixmario, free-games-notifier, Authenticator-extension, AURAFLIX, Delhi developer, web developer, Python developer, JavaScript developer, portfolio website, personal website">
+  <meta name="author" content="jaixmario">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://jaixmario.github.io/jaixmario/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="jaixmario | Official Personal Portfolio Site">
+  <meta property="og:description" content="Official site of jaixmario. Find the latest projects, GitHub profile, and professional information for the web developer jaixmario.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jaixmario.github.io/jaixmario/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/jaixmario">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="jaixmario | Official Personal Portfolio Site">
+  <meta name="twitter:description" content="Official site of jaixmario. Find the latest projects, GitHub profile, and professional information for the web developer jaixmario.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/jaixmario">
+  
+  <!-- Google Site Verification Placeholder -->
+  <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jaideep",
+      "additionalName": "jaixmario",
+      "url": "https://jaixmario.github.io/jaixmario/",
+      "image": "https://avatars.githubusercontent.com/jaixmario",
+      "sameAs": [
+        "https://github.com/jaixmario",
+        "mailto:Mario22623@gmail.com"
+      ],
+      "description": "Official personal portfolio website for Jaideep (jaixmario), a developer based in Delhi, India. Creator of free-games-notifier and Authenticator-extension.",
+      "jobTitle": "Web Developer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi",
+        "addressCountry": "India"
+      },
+      "knowsAbout": [
+        "Python",
+        "JavaScript",
+        "C++",
+        "HTML/CSS",
+        "Node.js",
+        "Django",
+        "Docker",
+        "Linux/Shell",
+        "Automation",
+        "Browser Extensions",
+        "Web Development"
+      ]
+    }
+  </script>
+  
+  <!-- Google Fonts: Inter & Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom style definitions -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Tailwind configuration using design tokens -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        container: {
+          center: true,
+          padding: '2rem',
+          screens: {
+            '2xl': '1400px',
+          },
+        },
+        extend: {
+          colors: {
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            primary: {
+              DEFAULT: 'hsl(var(--primary))',
+              foreground: 'hsl(var(--primary-foreground))',
+            },
+            secondary: {
+              DEFAULT: 'hsl(var(--secondary))',
+              foreground: 'hsl(var(--secondary-foreground))',
+            },
+            destructive: {
+              DEFAULT: 'hsl(var(--destructive))',
+              foreground: 'hsl(var(--destructive-foreground))',
+            },
+            muted: {
+              DEFAULT: 'hsl(var(--muted))',
+              foreground: 'hsl(var(--muted-foreground))',
+            },
+            accent: {
+              DEFAULT: 'hsl(var(--accent))',
+              foreground: 'hsl(var(--accent-foreground))',
+            },
+            popover: {
+              DEFAULT: 'hsl(var(--popover))',
+              foreground: 'hsl(var(--popover-foreground))',
+            },
+            card: {
+              DEFAULT: 'hsl(var(--card))',
+              foreground: 'hsl(var(--card-foreground))',
+            },
+          },
+          borderRadius: {
+            lg: 'var(--radius)',
+            md: 'calc(var(--radius) - 2px)',
+            sm: 'calc(var(--radius) - 4px)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['Roboto Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-background to-muted font-sans text-foreground">
+
+  <!-- Header / Navigation -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-4 py-4">
+      <nav class="flex justify-between items-center">
+        <h2 id="logo-title" class="text-2xl font-bold cursor-pointer hover:text-primary transition-colors duration-200">
+          Jaideep
+        </h2>
+        <div class="flex items-center gap-4">
+          <!-- Desktop navigation links -->
+          <div class="hidden md:flex gap-2">
+            <button data-nav-target="#about" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium hover:bg-muted transition-colors duration-200">About</button>
+            <button data-nav-target="#skills" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium hover:bg-muted transition-colors duration-200">Skills</button>
+            <button data-nav-target="#featured" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium hover:bg-muted transition-colors duration-200">Featured</button>
+            <button data-nav-target="#projects" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium hover:bg-muted transition-colors duration-200">Projects</button>
+            <button data-nav-target="#github" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium hover:bg-muted transition-colors duration-200">GitHub</button>
+            <button data-nav-target="#contact" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium hover:bg-muted transition-colors duration-200">Contact</button>
+          </div>
+          
+          <!-- Dark Mode Toggle Button -->
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-muted border border-border text-foreground transition-colors duration-200" aria-label="Toggle theme">
+            <!-- Sun Icon (shown in dark mode) -->
+            <svg id="sun-icon" class="h-5 w-5 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <!-- Moon Icon (shown in light mode) -->
+            <svg id="moon-icon" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 pt-24 pb-16 space-y-16">
+  
+    <!-- Hero Section -->
+    <section id="home" class="flex flex-col-reverse md:flex-row items-center justify-between py-16 gap-8 scroll-mt-24">
+      <div class="md:w-1/2 space-y-6 animate-fadeIn">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          Hi, I'm <span class="text-primary transition-colors duration-300">Jaideep</span> <span class="text-xl md:text-2xl font-semibold text-muted-foreground block mt-1">(@jaixmario)</span>
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-medium text-muted-foreground">
+          Developer & Technology Enthusiast
+        </h2>
+        <p class="text-lg text-muted-foreground max-w-xl">
+          I build exceptional digital experiences with modern technologies. Creator of 
+          <a href="https://jaixmario.github.io/free-games-notifier/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline transition-colors duration-200">free-games-notifier</a>, 
+          an automated notifier tool for tracking free games. Always learning, always growing.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button data-scroll-to="#contact" class="px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-md hover:opacity-90 shadow-md transition-all duration-200">
+            Get in Touch
+          </button>
+          <a href="https://github.com/jaixmario" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-background border border-border text-foreground font-medium rounded-md hover:bg-muted transition-colors duration-200">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      
+      <!-- Hero Avatar Image -->
+      <div class="md:w-1/2 flex justify-center animate-fadeIn" style="animation-delay: 0.2s">
+        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-lg flex items-center justify-center bg-gradient-to-br from-primary/30 to-secondary-foreground/20 transition-all duration-300">
+          <img id="avatar-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="absolute inset-0 object-cover w-full h-full opacity-0 transition-opacity duration-300" alt="Jai Profile Avatar" onload="this.classList.remove('opacity-0')">
+          <span id="avatar-fallback-initials" class="text-6xl font-bold text-primary select-none">J</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal Emulator Section -->
+    <section class="py-8">
+      <div id="terminal-card" class="max-w-3xl mx-auto border border-primary/20 bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+        <!-- Terminal Header -->
+        <div class="border-b border-border bg-muted/50 flex flex-row items-center justify-between px-4 py-3">
+          <div class="flex items-center gap-2">
+            <span class="h-3 w-3 rounded-full bg-red-500 inline-block"></span>
+            <span class="h-3 w-3 rounded-full bg-yellow-500 inline-block"></span>
+            <span class="h-3 w-3 rounded-full bg-green-500 inline-block"></span>
+          </div>
+          <span class="text-sm font-medium font-mono text-muted-foreground">terminal@jaideep:~</span>
+          <div class="flex items-center gap-2">
+            <!-- Minimize Button -->
+            <button id="terminal-minimize" class="p-1 rounded hover:bg-muted text-muted-foreground hover:text-foreground transition-colors duration-200" title="Minimize">
+              <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <!-- Clear Button -->
+            <button id="terminal-clear" class="p-1 rounded hover:bg-red-500 hover:text-white text-muted-foreground transition-colors duration-200" title="Clear">
+              <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Terminal Body -->
+        <div id="terminal-body" class="p-4 font-mono text-sm h-64 overflow-y-auto bg-black/95 text-green-400 space-y-2 cursor-text">
+          <p class="text-primary font-medium">Welcome to Jaideep's terminal. Type 'help' to see available commands.</p>
+          <div id="terminal-history" class="space-y-2">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-primary">$</span>
+                <span class="text-foreground">whoami</span>
+              </div>
+              <div class="pl-5 text-gray-300 whitespace-pre-line">Jaideep - Developer from Delhi, India</div>
+            </div>
+          </div>
+          <form id="terminal-form" class="flex items-center gap-2">
+            <span class="text-primary font-bold">$</span>
+            <input id="terminal-input" type="text" class="flex-1 bg-transparent border-none outline-none text-foreground caret-primary" aria-label="Terminal input" autocomplete="off">
+          </form>
+        </div>
+      </div>
+      
+      <!-- Minimized Terminal Trigger -->
+      <button id="terminal-restore" class="fixed bottom-4 right-4 z-50 flex items-center gap-2 px-4 py-2 bg-background border border-primary/30 text-foreground font-medium rounded-md shadow-lg hover:bg-muted transition-all duration-200 hidden">
+        <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h6v6"></path>
+          <path d="M9 21H3v-6"></path>
+          <path d="M21 3l-7 7"></path>
+          <path d="M3 21l7-7"></path>
+        </svg>
+        Open Terminal
+      </button>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 scroll-mt-24 space-y-8">
+      <h2 class="text-3xl font-bold text-center">About Me</h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2 space-y-4">
+          <p class="text-lg text-muted-foreground leading-relaxed">
+            I'm a passionate developer based in Delhi, India, with a strong foundation in multiple programming languages and technologies.
+          </p>
+          <p class="text-lg text-muted-foreground leading-relaxed">
+            My journey in tech is driven by curiosity and a desire to create impactful solutions. I'm constantly learning new technologies and methodologies to enhance my skills.
+          </p>
+          <p class="text-lg text-muted-foreground leading-relaxed">
+            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
+          </p>
+          <div class="flex items-center gap-2 text-foreground font-medium mt-6">
+            <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Delhi, India</span>
+          </div>
+        </div>
+        
+        <!-- Journey Card -->
+        <div class="md:w-1/2 bg-card border border-border rounded-lg p-6 space-y-6">
+          <h3 class="text-xl font-semibold text-foreground">My Journey</h3>
+          <div class="space-y-4">
+            <div class="border-l-2 border-primary pl-4 py-1">
+              <h4 class="font-medium text-foreground">Learning & Growth</h4>
+              <p class="text-muted-foreground text-sm mt-1">
+                Continuously expanding my knowledge in various technologies and frameworks.
+              </p>
+            </div>
+            <div class="border-l-2 border-primary pl-4 py-1">
+              <h4 class="font-medium text-foreground">Problem Solving</h4>
+              <p class="text-muted-foreground text-sm mt-1">
+                Passionate about finding elegant solutions to complex problems.
+              </p>
+            </div>
+            <div class="border-l-2 border-primary pl-4 py-1">
+              <h4 class="font-medium text-foreground">Collaboration</h4>
+              <p class="text-muted-foreground text-sm mt-1">
+                Enjoy working with teams to build innovative applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 scroll-mt-24 space-y-8">
+      <h2 class="text-3xl font-bold text-center">My Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Programming Languages -->
+        <div class="bg-card border border-border rounded-lg p-6 space-y-6">
+          <h3 class="text-xl font-semibold text-foreground">Programming Languages</h3>
+          <div class="space-y-4">
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>Python</span>
+                <span>90%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-blue-500 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>C++</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-purple-500 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>JavaScript</span>
+                <span>80%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-yellow-500 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>HTML/CSS</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-orange-500 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Tools -->
+        <div class="bg-card border border-border rounded-lg p-6 space-y-6">
+          <h3 class="text-xl font-semibold text-foreground">Frameworks & Tools</h3>
+          <div class="space-y-4">
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>Node.js</span>
+                <span>80%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-green-500 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>Django</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-600 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>Docker</span>
+                <span>75%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-sky-500 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+            <!-- Skill Item -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm font-medium">
+                <span>Linux/Shell</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-secondary rounded-full overflow-hidden">
+                <div class="h-full bg-orange-500 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Project Section -->
+    <section id="featured" class="py-16 scroll-mt-24 space-y-8">
+      <h2 class="text-3xl font-bold text-center">Featured Project</h2>
+      <div class="w-full bg-card border-2 border-primary/20 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6 md:p-8 space-y-4">
+          <div class="inline-block bg-primary/10 px-3 py-1 rounded-full text-primary text-sm font-medium transition-colors duration-300">
+            Featured Project
+          </div>
+          <h3 class="text-3xl font-bold text-foreground">free-games-notifier</h3>
+          <p class="text-lg text-muted-foreground leading-relaxed">
+            A notifier tool for tracking and getting notified about free games on platforms like Epic Games, Steam, etc. Automatically checks listings, runs background validation, and alerts you instantly.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-xs font-medium">Python</span>
+            <span class="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-xs font-medium">Automation</span>
+            <span class="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-xs font-medium">Notifier</span>
+            <span class="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-xs font-medium">API Integration</span>
+          </div>
+          <div class="flex flex-wrap pt-4 gap-4">
+            <a href="https://github.com/jaixmario/free-games-notifier" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 border border-border text-foreground font-medium rounded-md hover:bg-muted transition-colors duration-200">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+              View Code
+            </a>
+            <a href="https://jaixmario.github.io/free-games-notifier/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-md hover:opacity-90 transition-opacity duration-200">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 scroll-mt-24 space-y-8">
+      <h2 class="text-3xl font-bold text-center">My Projects</h2>
+      <div class="space-y-6">
+        <!-- Project Filters -->
+        <div id="project-filters" class="flex flex-wrap gap-2 justify-center md:justify-start">
+          <button data-filter="all" class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium bg-primary text-primary-foreground transition-all duration-200">
+            All
+          </button>
+          <!-- Filters dynamically extracted by JS -->
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project 1: free-games-notifier -->
+          <div class="project-card bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full" data-tags="Python,Automation,Notifier">
+            <div class="p-6 flex-grow space-y-3">
+              <h3 class="text-xl font-bold text-foreground">free-games-notifier</h3>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                A notifier tool for tracking and getting notified about free games on platforms like Epic Games, Steam, etc.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Python</span>
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Automation</span>
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Notifier</span>
+              </div>
+            </div>
+            <div class="p-6 border-t border-border/50 flex justify-between gap-4">
+              <a href="https://github.com/jaixmario/free-games-notifier" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary transition-colors duration-200">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+                Code
+              </a>
+              <a href="https://jaixmario.github.io/free-games-notifier/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded hover:opacity-90 transition-opacity duration-200">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Authenticator-extension -->
+          <div class="project-card bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full" data-tags="JavaScript,Extension,Security">
+            <div class="p-6 flex-grow space-y-3">
+              <h3 class="text-xl font-bold text-foreground">Authenticator-extension</h3>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                A browser extension for generating 2FA authenticator tokens directly in your browser.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">JavaScript</span>
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Extension</span>
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Security</span>
+              </div>
+            </div>
+            <div class="p-6 border-t border-border/50 flex justify-between gap-4">
+              <a href="https://github.com/jaixmario/Authenticator-extension" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary transition-colors duration-200">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+                Code
+              </a>
+              <a href="https://github.com/jaixmario/Authenticator-extension" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary text-secondary-foreground text-sm font-medium rounded hover:opacity-95 transition-opacity duration-200">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: AURAFLIX -->
+          <div class="project-card bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full" data-tags="JavaScript,Web,Streaming">
+            <div class="p-6 flex-grow space-y-3">
+              <h3 class="text-xl font-bold text-foreground">AURAFLIX</h3>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                A streaming platform with a modern interface that allows users to browse and search for movies and TV shows.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">JavaScript</span>
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Web</span>
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Streaming</span>
+              </div>
+            </div>
+            <div class="p-6 border-t border-border/50 flex justify-end">
+              <a href="https://auroraflix.onrender.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded hover:opacity-90 transition-opacity duration-200">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="py-16 scroll-mt-24 space-y-8">
+      <h2 class="text-3xl font-bold text-center">GitHub Profile</h2>
+      <div class="space-y-8">
+        
+        <!-- GitHub Profile Card -->
+        <div id="github-profile-card" class="bg-card border border-border rounded-lg p-6 shadow-sm">
+          <!-- Profile Card Loading State (Hidden by default, used if needed) -->
+          <div id="github-profile-loading" class="hidden flex justify-center items-center h-28 py-4">
+            <svg class="animate-spin h-6 w-6 text-primary mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span class="text-muted-foreground font-medium">Fetching GitHub profile...</span>
+          </div>
+          <!-- Profile Card Error State (Hidden by default) -->
+          <div id="github-profile-error" class="hidden text-center p-4 border border-destructive/20 rounded-lg bg-destructive/10">
+            <svg class="h-6 w-6 text-destructive mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <p class="text-destructive text-sm font-medium">Failed to fetch profile from GitHub</p>
+          </div>
+          <!-- Profile Card Content (Pre-populated for SEO crawlers) -->
+          <div id="github-profile-content" class="flex flex-col md:flex-row gap-6 items-center">
+            <div class="relative w-24 h-24 rounded-full overflow-hidden border-2 border-border shadow flex items-center justify-center bg-gradient-to-br from-primary/20 to-secondary/30">
+              <img id="gh-avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="absolute inset-0 object-cover w-full h-full opacity-0 transition-opacity duration-300" alt="GitHub Profile" onload="this.classList.remove('opacity-0')">
+              <span id="gh-avatar-fallback-initials" class="text-3xl font-bold text-primary select-none">J</span>
+            </div>
+            <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-3">
+              <h3 id="gh-name" class="text-xl font-bold text-foreground">Jaideep (jaixmario)</h3>
+              <p id="gh-bio" class="text-muted-foreground text-sm md:text-base max-w-xl">Official personal portfolio website for Jaideep (jaixmario), a developer based in Delhi, India. Creator of free-games-notifier and Authenticator-extension.</p>
+              
+              <div class="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-muted-foreground mt-1">
+                <div class="flex items-center gap-1">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span id="gh-location">Delhi, India</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                  <a id="gh-blog" href="https://github.com/jaixmario" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">github.com/jaixmario</a>
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span id="gh-followers">View on GitHub</span>
+                </div>
+              </div>
+
+              <a id="gh-link" href="https://github.com/jaixmario" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded hover:opacity-90 transition-opacity duration-200">
+                View GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold mt-12 mb-6">Repository Statistics</h3>
+        
+        <!-- Repo Stats Counter Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Total Repos Card -->
+          <div class="bg-card border border-border rounded-lg p-5 flex flex-col justify-center">
+            <h4 class="text-sm font-medium text-muted-foreground">Repositories</h4>
+            <div class="flex items-center gap-2 mt-2">
+              <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              <span id="stats-repos" class="text-3xl font-bold">...</span>
+            </div>
+          </div>
+          <!-- Total Stars Card -->
+          <div class="bg-card border border-border rounded-lg p-5 flex flex-col justify-center">
+            <h4 class="text-sm font-medium text-muted-foreground">Stars</h4>
+            <div class="flex items-center gap-2 mt-2">
+              <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span id="stats-stars" class="text-3xl font-bold">0</span>
+            </div>
+          </div>
+          <!-- Total Forks Card -->
+          <div class="bg-card border border-border rounded-lg p-5 flex flex-col justify-center">
+            <h4 class="text-sm font-medium text-muted-foreground">Forks</h4>
+            <div class="flex items-center gap-2 mt-2">
+              <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="3"></circle>
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 15V9a4 4 0 0 0-4-4H9"></path>
+                <line x1="6" y1="9" x2="6" y2="15"></line>
+              </svg>
+              <span id="stats-forks" class="text-3xl font-bold">0</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Repositories Detail Grid -->
+        <div id="repos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Populated dynamically via GitHub repos fetch -->
+          <div class="github-repo-card-loading flex justify-center items-center h-44 border border-dashed border-border rounded-lg py-4 col-span-full">
+            <svg class="animate-spin h-6 w-6 text-primary mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span class="text-muted-foreground font-medium">Fetching repositories from GitHub...</span>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 scroll-mt-24 space-y-8">
+      <h2 class="text-3xl font-bold text-center">Get In Touch</h2>
+      <div class="max-w-2xl mx-auto space-y-8">
+        
+        <!-- Contact Links Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Email Card -->
+          <a href="mailto:Mario22623@gmail.com" class="flex items-center gap-4 p-5 bg-card border border-border rounded-lg hover:bg-muted hover:border-primary/30 transition-all duration-300">
+            <div class="bg-primary/10 p-3 rounded-full text-primary transition-colors duration-300">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-medium text-foreground">Email</h3>
+              <p class="text-sm text-muted-foreground mt-0.5">Mario22623@gmail.com</p>
+            </div>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/jaixmario" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-5 bg-card border border-border rounded-lg hover:bg-muted hover:border-primary/30 transition-all duration-300">
+            <div class="bg-primary/10 p-3 rounded-full text-primary transition-colors duration-300">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-medium text-foreground">GitHub</h3>
+              <p class="text-sm text-muted-foreground mt-0.5">github.com/jaixmario</p>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Notice about mail section removal -->
+        <div class="p-4 bg-muted/40 border border-border/80 rounded-lg text-center">
+          <p class="text-sm text-muted-foreground leading-relaxed">
+            Please contact me directly via email or GitHub. The interactive contact form has been removed to simplify direct communications.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-muted py-8 border-t border-border/30">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl font-bold text-foreground">Jaideep</h2>
+          <p class="text-muted-foreground text-sm mt-1">Developer from Delhi, India</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://github.com/jaixmario" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-background border border-transparent hover:border-border text-muted-foreground hover:text-foreground transition-all duration-200" aria-label="GitHub">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </a>
+          <a href="mailto:Mario22623@gmail.com" class="p-2 rounded-full hover:bg-background border border-transparent hover:border-border text-muted-foreground hover:text-foreground transition-all duration-200" aria-label="Email">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div id="copyright-year" class="mt-8 text-center text-sm text-muted-foreground">
+        &copy; <span id="year">2026</span> Jaideep. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme Customizer Popover Trigger (bottom-left) -->
+  <div class="fixed bottom-4 left-4 z-50">
+    <button id="customizer-btn" class="p-2.5 rounded-full bg-background border border-border text-foreground hover:bg-muted shadow-lg flex items-center justify-center transition-all duration-200" aria-label="Customize theme" aria-expanded="false">
+      <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+        <path d="M7.5 10.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5z"></path>
+        <path d="M11.5 7.5c.828 0 1.5-.672 1.5-1.5S12.328 4.5 11.5 4.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5z"></path>
+        <path d="M16.5 9.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5z"></path>
+        <path d="M6 14c0-2 2-3 4-3 1.5 0 3 1.5 3 3 0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5c0-3.5-3-6.5-7.5-6.5C5.075 7.5 2 10.8 2 15c0 3.5 3 6.5 7.5 6.5s6.5-2.2 6.5-5.5"></path>
+      </svg>
+    </button>
+    
+    <!-- Customizer Panel -->
+    <div id="customizer-panel" class="hidden absolute bottom-14 left-0 w-80 p-5 bg-popover border border-border text-popover-foreground rounded-lg shadow-xl space-y-4 animate-fadeIn">
+      <h4 class="font-semibold text-sm tracking-tight border-b border-border pb-2 text-foreground">Customize Theme</h4>
+      
+      <!-- Tab Headers -->
+      <div class="flex bg-muted rounded-md p-1 text-sm font-medium">
+        <button id="tab-colors-btn" class="flex-1 py-1 rounded text-center bg-background text-foreground shadow-sm">Colors</button>
+        <button id="tab-fonts-btn" class="flex-1 py-1 rounded text-center text-muted-foreground hover:text-foreground">Fonts</button>
+      </div>
+
+      <!-- Tab content colors -->
+      <div id="tab-colors-content" class="py-1">
+        <div class="grid grid-cols-5 gap-2">
+          <!-- Color circles -->
+          <button data-theme="theme-default" class="theme-circle-btn relative h-8 w-8 rounded-full bg-[hsl(221.2,83.2%,53.3%)] flex items-center justify-center border border-transparent focus:ring-2 focus:ring-ring focus:ring-offset-2" title="Default">
+            <span class="sr-only">Default</span>
+            <svg class="h-4 w-4 text-white check-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <button data-theme="theme-purple" class="theme-circle-btn relative h-8 w-8 rounded-full bg-[hsl(262.1,83.3%,57.8%)] flex items-center justify-center border border-transparent focus:ring-2 focus:ring-ring focus:ring-offset-2" title="Purple">
+            <span class="sr-only">Purple</span>
+            <svg class="h-4 w-4 text-white check-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <button data-theme="theme-green" class="theme-circle-btn relative h-8 w-8 rounded-full bg-[hsl(142.1,76.2%,36.3%)] flex items-center justify-center border border-transparent focus:ring-2 focus:ring-ring focus:ring-offset-2" title="Green">
+            <span class="sr-only">Green</span>
+            <svg class="h-4 w-4 text-white check-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <button data-theme="theme-orange" class="theme-circle-btn relative h-8 w-8 rounded-full bg-[hsl(24.6,95%,53.1%)] flex items-center justify-center border border-transparent focus:ring-2 focus:ring-ring focus:ring-offset-2" title="Orange">
+            <span class="sr-only">Orange</span>
+            <svg class="h-4 w-4 text-white check-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <button data-theme="theme-teal" class="theme-circle-btn relative h-8 w-8 rounded-full bg-[hsl(173,80.4%,40%)] flex items-center justify-center border border-transparent focus:ring-2 focus:ring-ring focus:ring-offset-2" title="Teal">
+            <span class="sr-only">Teal</span>
+            <svg class="h-4 w-4 text-white check-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab content fonts -->
+      <div id="tab-fonts-content" class="hidden py-1 space-y-2">
+        <div class="grid grid-cols-2 gap-2">
+          <button id="font-sans-btn" class="px-3 py-2 border border-border text-foreground hover:bg-muted text-sm font-sans rounded-md text-left transition-colors duration-200">
+            Sans Serif
+          </button>
+          <button id="font-serif-btn" class="px-3 py-2 border border-border text-foreground hover:bg-muted text-sm font-serif rounded-md text-left transition-colors duration-200">
+            Serif
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons script -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
