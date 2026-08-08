@@ -89,7 +89,7 @@ exploring:    [AI tooling, Web3]
 
 <!-- Renders once .github/workflows/snake.yml (provided separately) is added to this repo and has run at least once. -->
 <div align="center">
-<img src="https://raw.githubusercontent.com/jaixmario/jaixmario/output/github-contribution-grid-snake.svg" alt="contribution snake"/>
+<img src="https://raw.githubusercontent.com/jaixmario/jaixmario/output/github-contribution-grid-snake-dark.svg" alt="contribution snake"/>
 </div>
 
 ---
