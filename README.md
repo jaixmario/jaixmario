@@ -76,12 +76,10 @@ exploring:    [AI tooling, Web3]
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=jaixmario&show_icons=true&hide_border=true&bg_color=0D1117&title_color=00E5A0&text_color=c9d1d9&icon_color=7C3AED&ring_color=00E5A0" alt="GitHub stats" height="165"/>
 <img src="https://streak-stats.demolab.com?user=jaixmario&hide_border=true&background=0D1117&ring=00E5A0&fire=7C3AED&currStreakLabel=00E5A0&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff" alt="GitHub streak" height="165"/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=jaixmario&bg_color=0D1117&color=00E5A0&line=7C3AED&point=ffffff&area=true&hide_border=true" alt="activity graph" width="95%"/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=jaixmario&theme=dracula&no-frame=true&row=1&column=6&margin-w=8" alt="trophies"/>
 
 </div>
 
